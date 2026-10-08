@@ -1,0 +1,7 @@
+{
+  "name": "aegis-harness-browser-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {"test:browser": "node tests/browser-smoke.cjs", "check:js": "node --check aegis/web/app.js"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

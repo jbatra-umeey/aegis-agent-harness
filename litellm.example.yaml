@@ -1,0 +1,21 @@
+# Reference config: choose provider/model IDs supported by your deployment.
+# No LiteLLM proxy is started by the default demo. See DEPLOYMENT.md.
+model_list:
+  - model_name: aegis-economy
+    litellm_params:
+      model: os.environ/AEGIS_ECONOMY_MODEL
+      api_key: os.environ/AEGIS_ECONOMY_PROVIDER_KEY
+  - model_name: aegis-reasoning
+    litellm_params:
+      model: os.environ/AEGIS_REASONING_MODEL
+      api_key: os.environ/AEGIS_REASONING_PROVIDER_KEY
+  - model_name: aegis-fallback
+    litellm_params:
+      model: os.environ/AEGIS_FALLBACK_MODEL
+      api_key: os.environ/AEGIS_FALLBACK_PROVIDER_KEY
+litellm_settings:
+  num_retries: 0
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+# Keep the harness as the single retry owner. Production virtual-key budgets
+# require a supported database-backed deployment; see the official LiteLLM guide.

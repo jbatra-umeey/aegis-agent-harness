@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-10-08T05:02:57.481221+00:00",
+  "mode": "deterministic_fixture",
+  "scope": "Control-flow, safety boundaries, fault handling and cache behavior; no live provider quality or latency claims.",
+  "passed": 17,
+  "total": 17,
+  "cases": [
+    {
+      "case": "regression",
+      "passed": true,
+      "status": "awaiting_approval",
+      "outbound_attempts": 9,
+      "policy_units": 12,
+      "error": null
+    },
+    {
+      "case": "healthy",
+      "passed": true,
+      "status": "completed",
+      "outbound_attempts": 9,
+      "policy_units": 12,
+      "error": null
+    },
+    {
+      "case": "injection",
+      "passed": true,
+      "status": "awaiting_approval",
+      "outbound_attempts": 9,
+      "policy_units": 12,
+      "error": null
+    },
+    {
+      "case": "missing",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 7,
+      "policy_units": 8,
+      "error": "evidence_missing_or_invalid"
+    },
+    {
+      "case": "stale",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 9,
+      "policy_units": 12,
+      "error": "evidence_stale"
+    },
+    {
+      "case": "fallback",
+      "passed": true,
+      "status": "awaiting_approval",
+      "outbound_attempts": 12,
+      "policy_units": 21,
+      "error": null
+    },
+    {
+      "case": "outage",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 2,
+      "policy_units": 4,
+      "error": "all_routes_unavailable"
+    },
+    {
+      "case": "forbidden_tool",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 6,
+      "policy_units": 7,
+      "error": "tool_scope_denied"
+    },
+    {
+      "case": "malformed",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 1,
+      "policy_units": 2,
+      "error": "model_contract_invalid"
+    },
+    {
+      "case": "revision",
+      "passed": true,
+      "status": "awaiting_approval",
+      "outbound_attempts": 11,
+      "policy_units": 16,
+      "error": null
+    },
+    {
+      "case": "critic_loop",
+      "passed": true,
+      "status": "blocked",
+      "outbound_attempts": 11,
+      "policy_units": 16,
+      "error": "critic_revision_limit"
+    },
+    {
+      "case": "exact_cache",
+      "passed": true,
+      "cold_attempts": 9,
+      "warm_attempts": 0,
+      "cache_hits": 9
+    },
+    {
+      "case": "tenant_cache_isolation",
+      "passed": true
+    },
+    {
+      "case": "approved_simulation",
+      "passed": true
+    },
+    {
+      "case": "declined_simulation",
+      "passed": true
+    },
+    {
+      "case": "parallel_budget",
+      "passed": true
+    },
+    {
+      "case": "durable_restart",
+      "passed": true
+    }
+  ]
+}

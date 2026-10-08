@@ -1,0 +1,16 @@
+services:
+  harness:
+    build: .
+    ports: ["127.0.0.1:8080:8080"]
+    volumes: ["aegis-data:/data"]
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=64m"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      AEGIS_MODE: fixture
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+volumes:
+  aegis-data:
